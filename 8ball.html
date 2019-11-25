@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>8 ball</title>
+        <style>
+            
+            @font-face {
+            font-family: "zillaslabRegular";
+            src: url(zillaslab-regular-webfont.woff);
+        }
+            
+            body {
+                background-color: black;
+                padding: 0;
+                margin: 0;
+            }
+            .container {
+                width: 425px;
+                position: relative;
+                margin: 20vh auto;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+            }
+            p {
+                font-size: 16px;
+                color: white;
+            }
+
+            .questionBox {
+                width: 360px;
+                border-radius: 25px;
+                text-align:center:right;
+                height: 50px;
+                
+            }
+
+            textarea {
+                font-family: zillaslabRegular;
+                font-size: 40px;
+                resize: none;
+                display:block;
+                margin:0 auto;
+            }
+            .button {
+                font-family: zillaslabRegular;
+                font-size: 40px;
+                text-align: center;
+                border-radius: 25px;
+                display:block;
+                margin:0 auto;
+            }
+            .ball {
+                font-family: zillaslabRegular;
+                font-size: 60px;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+
+
+    
+    <body>
+        <div class="container">
+            <h2 class="ball">8 ball</h2>
+            <h1>Ask a question...</h1>
+            <textarea placeholder="Question..." class="questionBox" id="textarea"></textarea>
+            <button onclick="getAnswer()" id="button" class="button"> Send </button>
+            <p id="answer"></p>
+        </div>
+
+        <script>
+
+            var input = document.getElementById("textarea");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("button").click();
+  }
+});
+
+
+
+            function getAnswer() {
+                var Val = document.getElementById("textarea").value;
+                if (Val == "What is the answer to life the universe and everything")
+                {
+                    location.replace("8ball4.html")
+                }
+
+                else if (Val == "er cecilie sej")
+                {
+                    location.replace("8ball5.html")
+                }
+
+                
+                else if (Val == "er august sej")
+                {
+                    location.replace("8ball5.html")
+                }
+
+                
+                else if (Val == "er camilla sej")
+                {
+                    location.replace("8ball5.html")
+                }
+
+                
+                else if (Val == "er mie sej")
+                {
+                    location.replace("8ball5.html")
+                }
+
+                
+                else if (Val == "er Cecilie sej")
+                {
+                    location.replace("8ball5.html")
+                }
+
+                
+                else if (Val == "er August sej")
+                {
+                    location.replace("8ball5.html")
+                }
+
+                
+                else if (Val == "er Camilla sej")
+                {
+                    location.replace("8ball5.html")
+                }
+
+                
+                else if (Val == "er Mie sej")
+                {
+                    location.replace("8ball5.html")
+                }
+
+
+                else if (!Val == " ") 
+                {
+                    location.replace("8ball2.html");
+                }
+
+                else {
+                location.replace("8ball3.html");
+            }}
+
+            
+        </script>
+    </body>
+
+</html>

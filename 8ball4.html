@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>8 ball svar</title>
+        <style>
+            
+            @font-face {
+            font-family: "zillaslabRegular";
+            src: url(zillaslab-regular-webfont.woff);
+        }
+            
+            body {
+                background-color: black;
+                padding: 0;
+                margin: 0;
+            }
+            .container {
+                width: 425px;
+                position: relative;
+                margin: 20vh auto;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+            }
+            p {
+                font-size: 50px;
+                color: white;
+                font-family: zillaslabRegular;
+            }
+
+            .questionBox {
+                width: 360px;
+                border-radius: 25px;
+                text-align:center:right;
+                height: 50px;
+                
+            }
+
+            textarea {
+                font-family: zillaslabRegular;
+                font-size: 40px;
+                resize: none;
+            }
+
+            .button {
+                font-family: zillaslabRegular;
+                font-size: 40px;
+                text-align: center;
+                border-radius: 25px;
+            }
+            .ball {
+                font-family: zillaslabRegular;
+                font-size: 60px;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+
+
+    
+    <body onload="getAnswer()">
+        <div class="container">
+          <h2 class="ball">8 ball</h2>
+            <p id="answer"></p>
+            <button class="button" onclick="tryAgain()" id="button">Try again</button>
+        </div>
+
+
+
+        <script>
+            var answers=["The answer is 42", "42"]
+            
+            function getAnswer() {
+                var random=answers[(Math.floor(Math.random()*answers.length))]
+                document.getElementById("answer").innerHTML= random;
+            }
+            function tryAgain() {
+               location.replace("8ball.html") 
+            }
+            
+            var input = document.readyState.addEventListener();
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("button").click();
+  }
+});
+
+        </script>
+    </body>
+
+</html>
